@@ -1,0 +1,7 @@
+/* BibTeX */
+.bibtex span.default {font-weight:normal;color:#000000;}
+.bibtex span.entrytype {font-weight:bold;color:#000000;}
+.bibtex span.label {font-weight:bold;color:#006e28;}
+.bibtex span.property {font-weight:normal;color:#0057ae;}
+.bibtex span.string {font-weight:normal;color:#bf0303;}
+.bibtex span.digit {font-weight:normal;color:#b08000;}
