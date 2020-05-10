@@ -1,0 +1,51 @@
+/* BibTeX */
+.bibtex span.default {font-weight:normal;color:#000000;}
+.bibtex span.entrytype {font-weight:bold;color:#000000;}
+.bibtex span.label {font-weight:bold;color:#006e28;}
+.bibtex span.property {font-weight:normal;color:#0057ae;}
+.bibtex span.string {font-weight:normal;color:#bf0303;}
+.bibtex span.digit {font-weight:normal;color:#b08000;}
+
+*:focus {
+    outline: none;
+}
+
+div .bibtex {
+  border-radius: 0.25rem;
+  background-color: #f7f7f7;
+  font-size: 0.75rem;
+  width: 70vw;
+  min-height: 30vh;
+  max-height: 60vh;
+  margin: 5px 0;
+  white-space: pre-wrap;
+  word-break: break-all; 
+  word-wrap: break-word;  
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+button {
+    width:100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--color-solid);
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+    box-shadow: 0 0 5px #999;
+    outline: none;
+    transition: background 0.5s;
+  }
+
+  button:hover {
+    box-shadow: 0 2px 7px #999;
+  }
+  button:active {
+    box-shadow: 0 0 5px #999;
+
+    background: linear-gradient(90deg, #8fd3f4  0%, #84fab0 100%);
+  }

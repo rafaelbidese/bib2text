@@ -1,57 +1,25 @@
-import React, {useState, useEffect}  from 'react';
+import React, {useState}  from 'react';
 import './App.css';
-import Cite from 'citation-js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import sampleBib from './utils/sampleBib.js'
+import Highlight from './components/Highlight/Highlight.js'
+import Citation from './components/Citation/Citation.js'
 
+const App = () => {
+  const [bib, setBib] = useState('');
 
-
-function App() {
-  const [bib, setBib]     = useState('');
-  const [query, setQuery] = useState(sampleBib)
-  const [text, setText]   = useState('');
-
-  function getQuery(){
-    if(bib !== '' && bib !== query){
-      setQuery(bib);
-    }
+  function startConversion(value) {
+    setBib(value);
   }
-
-  function convertBib(){
-    var cite = new Cite();
-
-    var opt = { 
-      type: 'string',
-      style:'citation-apa',
-      lang:'en-US'
-   }
-    var parseAsync = Cite.parse.input.async.chain
-
-    parseAsync(query)
-    .then((data) => setText(cite.set(data).get(opt)))
-    .catch((e) => setText(e.message))
-  }
-
-  useEffect(() => {
-    convertBib();
-  },[query]);
 
   return (
     <div className="App">
       <h1>bib2text</h1>
       <div className="outside-container">
-        <h2>Input your bib citation here</h2>
-        <textarea 
-            placeholder={sampleBib} 
-            value={bib}
-            onChange={(e) => setBib(e.target.value)}
-            onBlur={getQuery}
-        />
-        <h2>Plain Text Citation</h2>
-        <p>{text}</p>
+        <Highlight onHighlightDone={startConversion}/>
+        <Citation highlight={bib}/>
       </div>
       <footer className='footer'>
         Designed with 

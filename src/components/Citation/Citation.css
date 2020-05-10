@@ -1,0 +1,13 @@
+.citation-wrapper {
+    width: 73vw;
+    color: var(--color-solid);
+    font-size: 14px;
+    margin: 5px 0; 
+}
+
+.citation-wrapper p {
+    width: 73vw;
+    color: var(--color-solid);
+    font-size: 14px;
+    margin: 5px 0;
+}

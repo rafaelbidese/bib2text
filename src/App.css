@@ -2,6 +2,7 @@
   --color-block: #EEEEEE;
   --color-solid: #666;
   --color-primary: #4783fb;
+  --color-accent: #84fab0;
 }
 
 .App {
@@ -27,17 +28,6 @@
   padding: 1rem;
 }
 
-
-textarea {
-  border-radius: 0.5rem;
-  max-lines: 10;
-  width:  90%;
-  height: 150px;
-  resize: none; 
-  margin: 5px 0;
-
-}
-
 h2 {
   color: var(--color-solid);
   font-size: 18px;
@@ -45,14 +35,6 @@ h2 {
   width: 90%;
   margin: 5px 0;
 }
-
-p {
-  width: 90%;
-  color: var(--color-solid);
-  font-size: 14px;
-  margin: 5px 0;
-}
-
 
 .footer {
   font-size: 12px;
@@ -75,3 +57,4 @@ a {
   color: #000;
   margin: 0 5px;
 }
+
